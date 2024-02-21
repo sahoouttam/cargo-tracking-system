@@ -1,5 +1,6 @@
 package com.cargo.tracking.system.domain.model.cargo;
 
+import com.cargo.tracking.system.domain.model.location.Location;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,4 +18,8 @@ public class Cargo {
     private RouteSpecification routeSpecification;
     private Itinerary itinerary;
     private Delivery delivery;
+
+    public TrackingId getTrackingId() {
+        return trackingId;
+    }
 }

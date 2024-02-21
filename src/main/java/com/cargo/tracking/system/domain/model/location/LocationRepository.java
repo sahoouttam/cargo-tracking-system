@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface LocationRepository {
 
-    Location find(UnLocode unLocode);
+    Location findByUnLocode(UnLocode unLocode);
 
     List<Location> findAll();
 }

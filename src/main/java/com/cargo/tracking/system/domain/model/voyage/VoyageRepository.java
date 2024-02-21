@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface VoyageRepository {
 
-    Voyage find(VoyageNumber voyageNumber);
+    Voyage findByVoyageNumber(VoyageNumber voyageNumber);
 
     List<Voyage> findAll();
 }

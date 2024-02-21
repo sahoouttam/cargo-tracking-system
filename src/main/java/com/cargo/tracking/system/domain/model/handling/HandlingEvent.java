@@ -91,4 +91,59 @@ public class HandlingEvent implements Serializable {
     }
 
 
+    public Type getType() {
+        return type;
+    }
+
+    public Voyage getVoyage() {
+        return voyage;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public Date getCompletionTime() {
+        return completionTime;
+    }
+
+    public Date getRegistrationTime() {
+        return registrationTime;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public String getSummary() {
+        StringBuilder builder = new StringBuilder(location.getName()).append("\n")
+                .append(completionTime).append("\n")
+                .append("Type: ").append(type).append("\n")
+                .append("Reg.: ").append(registrationTime)
+                .append("\n");
+
+        if (voyage != null) {
+            builder.append("Voyage: ").append(voyage.getVoyageNumber());
+        }
+        return builder.toString();
+
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("\n--- Handling event ---\n")
+                .append("Cargo: ").append(cargo.getTrackingId()).append("\n")
+                .append("Type: ").append(type).append("\n")
+                .append("Location: ").append(location.getName()).append("\n")
+                .append("Completed on: ").append(completionTime).append("\n")
+                .append("Registered on: ").append(registrationTime)
+                .append("\n");
+
+        if (voyage != null) {
+            builder.append("Voyage: ").append(voyage.getVoyageNumber())
+                    .append("\n");
+        }
+
+        return builder.toString();
+    }
 }
