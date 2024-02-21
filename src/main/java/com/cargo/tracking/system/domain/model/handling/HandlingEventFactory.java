@@ -61,6 +61,7 @@ public class HandlingEventFactory implements Serializable {
         if (voyage == null) {
             throw new UnknownVoyageException(voyageNumber);
         }
+        return voyage;
     }
 
     private Location findLocation(UnLocode unLocode) throws UnknownLocationException {

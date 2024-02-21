@@ -51,6 +51,12 @@ public class Voyage implements Serializable {
         return Objects.equals(voyageNumber, voyage.voyageNumber);
     }
 
+    public boolean sameIdentityAs(Voyage other) {
+        return other != null
+                && this.getVoyageNumber().sameValueAs(other.getVoyageNumber());
+    }
+
+
     @Override
     public int hashCode() {
         return Objects.hash(voyageNumber);

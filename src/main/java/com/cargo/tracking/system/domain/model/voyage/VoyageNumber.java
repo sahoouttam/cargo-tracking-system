@@ -37,6 +37,10 @@ public class VoyageNumber implements Serializable {
         return Objects.hash(number);
     }
 
+    boolean sameValueAs(VoyageNumber other) {
+        return other != null && this.number.equals(other.number);
+    }
+
     @Override
     public String toString() {
         return number;

@@ -3,8 +3,10 @@ package com.cargo.tracking.system.domain.model.cargo;
 import com.cargo.tracking.system.domain.model.location.Location;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-public class Cargo {
+public class Cargo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
