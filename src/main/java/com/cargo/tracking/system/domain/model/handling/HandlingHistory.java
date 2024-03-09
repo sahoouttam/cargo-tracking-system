@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class HandlingHistory {
 
     private final List<HandlingEvent> handlingEvents;
-    private static final HandlingHistory EMPTY =
+    public static final HandlingHistory EMPTY =
             new HandlingHistory(Collections.emptyList());
 
     public HandlingHistory(List<HandlingEvent> handlingEvents) {
